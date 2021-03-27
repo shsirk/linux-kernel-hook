@@ -8,3 +8,17 @@ It comes built in with a `mkdir` hook that just proxies the syscall over to the 
 ```bash
 make && sh ./load.sh
 ```
+
+
+## My Changes
+
+this hooking won't work on kernel version > 4.17. more here -> https://stackoverflow.com/questions/59851520/system-call-hooking-example-arguments-are-incorrect
+
+  - https://stackoverflow.com/questions/59851520/system-call-hooking-example-arguments-are-incorrect
+  - https://lkml.org/lkml/2018/3/29/409
+
+tried fixing this for mkdir hook poc and it works :)
+
+tested on 5.7.0-2 
+
+cheers!
